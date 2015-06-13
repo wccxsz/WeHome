@@ -1,0 +1,12 @@
+D:\Project\WeHome\WeHome.Entities\bin\Debug\WeHome.Entities.dll.config
+D:\Project\WeHome\WeHome.Entities\bin\Debug\WeHome.Entities.dll
+D:\Project\WeHome\WeHome.Entities\bin\Debug\WeHome.Entities.pdb
+D:\Project\WeHome\WeHome.Entities\bin\Debug\EntityFramework.dll
+D:\Project\WeHome\WeHome.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\WeHome\WeHome.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Project\WeHome\WeHome.Entities\bin\Debug\EntityFramework.xml
+D:\Project\WeHome\WeHome.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\WeHome\WeHome.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Project\WeHome\WeHome.Entities\obj\Debug\WeHome.Entities.dll
+D:\Project\WeHome\WeHome.Entities\obj\Debug\WeHome.Entities.pdb
+D:\Project\WeHome\WeHome.Entities\obj\Debug\WeHome.Entities.csprojResolveAssemblyReference.cache
