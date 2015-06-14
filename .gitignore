@@ -1,1 +1,5 @@
 bin/*obj/*
+/WeHome.UnitTest/obj
+/WeHome.Data/obj
+/WeHome.Entities/obj
+/WeHome.Framework/obj
