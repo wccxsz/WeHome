@@ -3,3 +3,7 @@ D:\Project\WeHome\WeHome.Framework\bin\Debug\WeHome.Framework.pdb
 D:\Project\WeHome\WeHome.Framework\obj\Debug\WeHome.Framework.dll
 D:\Project\WeHome\WeHome.Framework\obj\Debug\WeHome.Framework.pdb
 D:\Project\WeHome\WeHome.Framework\obj\Debug\WeHome.Framework.csprojResolveAssemblyReference.cache
+E:\WeHome\WeHome.Framework\bin\Debug\WeHome.Framework.dll
+E:\WeHome\WeHome.Framework\bin\Debug\WeHome.Framework.pdb
+E:\WeHome\WeHome.Framework\obj\Debug\WeHome.Framework.dll
+E:\WeHome\WeHome.Framework\obj\Debug\WeHome.Framework.pdb
