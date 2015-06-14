@@ -24,13 +24,20 @@ namespace WeHome.Data.Context
 
         public DbSet<Baby> Babies { get; set; }
 
+        public DbSet<MediaRecord> MediaRecords { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer<WeHomeContext>(null);
 
             //多对多映射
             modelBuilder.Entity<Role>().HasMany(t => t.Users)
-                .WithMany(t => t.Roles).Map(t => t.MapLeftKey("F_RoleID").MapRightKey("F_UserID").ToTable("T_UserRole"));
+                .WithMany(t => t.Roles).Map(t => t.MapLeftKey("F_RoleID")
+                    .MapRightKey("F_UserID").ToTable("T_UserRole"));
+
+            modelBuilder.Entity<Baby>().HasMany(t => t.MediaRecords)
+                .WithMany(t => t.Babies).Map(t => t.MapLeftKey("F_BabyID")
+                    .MapRightKey("F_MediaRecordID").ToTable("T_BabyMedia"));
         }
     }
 }

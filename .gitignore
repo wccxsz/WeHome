@@ -10,3 +10,4 @@ bin/*obj/*
 /WeHome.Framework/bin
 /WeHome.UnitTest/bin
 /WeHome.Web/bin
+/WeHome.Web/obj
