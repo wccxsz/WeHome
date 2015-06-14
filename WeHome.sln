@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.40302.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeHome.Web", "WeHome.Web\WeHome.Web.csproj", "{9F0C85E1-F2F6-4013-8396-B434A5708DCA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3A78B20-C40D-4D98-9BD2-3E73BE2276A5} = {A3A78B20-C40D-4D98-9BD2-3E73BE2276A5}
+		{4E428EC7-E2D2-4D5D-8F3D-07C5FDD08CD2} = {4E428EC7-E2D2-4D5D-8F3D-07C5FDD08CD2}
+		{DA7857DB-EEB4-4E88-9F9E-FEF04EBC9985} = {DA7857DB-EEB4-4E88-9F9E-FEF04EBC9985}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeHome.Entities", "WeHome.Entities\WeHome.Entities.csproj", "{4E428EC7-E2D2-4D5D-8F3D-07C5FDD08CD2}"
 EndProject
