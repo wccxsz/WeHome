@@ -4,3 +4,9 @@ bin/*obj/*
 /WeHome.Entities/obj
 /WeHome.Framework/obj
 /WeHome.BLL/obj
+/WeHome.BLL/bin
+/WeHome.Data/bin
+/WeHome.Entities/bin
+/WeHome.Framework/bin
+/WeHome.UnitTest/bin
+/WeHome.Web/bin
