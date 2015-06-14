@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure.Annotations;
+﻿using System.Data.Entity;
+using MySql.Data.Entity;
 using WeHome.Entities;
 
 namespace WeHome.Data.Context
 {
-    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class WeHomeContext : DbContext
     {
         public WeHomeContext()
@@ -22,6 +21,8 @@ namespace WeHome.Data.Context
         /// 角色
         /// </summary>
         public DbSet<Role> Roles { get; set; }
+
+        public DbSet<Baby> Babies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

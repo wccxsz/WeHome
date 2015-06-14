@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
+using WeHome.Web;
 
-[assembly: OwinStartup(typeof(WeHome.Web.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 
 namespace WeHome.Web
 {

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNet.Identity;
-using  System.ComponentModel.DataAnnotations.Schema;
+
 namespace WeHome.Entities
 {
     [Table("T_Users")]
@@ -112,6 +113,6 @@ namespace WeHome.Entities
         /// <summary>
         /// 用户所属角色
         /// </summary>
-        public virtual ICollection<Role> Roles { get; set; }
+        public virtual IList<Role> Roles { get; set; }
     }
 }
