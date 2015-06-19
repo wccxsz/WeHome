@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WeHome.UnitTest</RootNamespace>
     <AssemblyName>WeHome.UnitTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,6 +81,10 @@
     <ProjectReference Include="..\WeHome.Entities\WeHome.Entities.csproj">
       <Project>{4e428ec7-e2d2-4d5d-8f3d-07c5fdd08cd2}</Project>
       <Name>WeHome.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeHome.Framework\WeHome.Framework.csproj">
+      <Project>{da7857db-eeb4-4e88-9f9e-fef04ebc9985}</Project>
+      <Name>WeHome.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

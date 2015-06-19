@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WeHome.Data.Store;
 using WeHome.Entities;
+using WeHome.Framework.Tools;
 
 namespace WeHome.UnitTest
 {
@@ -23,7 +24,6 @@ namespace WeHome.UnitTest
         [TestMethod]
         public void TestMethod1()
         {
-
             var user = new User()
             {
                 AccessFailedCount = 0,
@@ -43,9 +43,15 @@ namespace WeHome.UnitTest
                 UserName = "duanyumei",
                 Roles = new List<Role>(5)
             };
-            user.Roles.Add(new Role() { Name = "Mother", CreateTime = DateTime.Now });
+            user.Roles.Add(new Role() {Name = "Mother", CreateTime = DateTime.Now});
             var userStore = new UserStore<User, int>();
             userStore.CreateAsync(user);
+        }
+
+        [TestMethod]
+        public void SendEmail()
+        {
+            Email.SendMail("密码重置邮件", "403033546@qq.com");
         }
     }
 }
