@@ -36,7 +36,7 @@ namespace WeHome.Entities
         /// 用户Email
         /// </summary>
         [Column("Email"), DataType(DataType.EmailAddress, ErrorMessage = "邮件地址无效"), MaxLength(50), Required]
-        [Index("Index_UserName", IsUnique = true)]
+        [Index("Index_Email", IsUnique = true)]
         public string Email { get; set; }
 
         /// <summary>
