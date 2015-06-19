@@ -32,12 +32,12 @@ namespace WeHome.Data.Context
 
             //多对多映射
             modelBuilder.Entity<Role>().HasMany(t => t.Users)
-                .WithMany(t => t.Roles).Map(t => t.MapLeftKey("F_RoleID")
-                    .MapRightKey("F_UserID").ToTable("T_UserRole"));
+                .WithMany(t => t.Roles).Map(t => t.MapLeftKey("RoleID")
+                    .MapRightKey("UserID").ToTable("T_UserRole"));
 
             modelBuilder.Entity<Baby>().HasMany(t => t.MediaRecords)
-                .WithMany(t => t.Babies).Map(t => t.MapLeftKey("F_BabyID")
-                    .MapRightKey("F_MediaRecordID").ToTable("T_BabyMedia"));
+                .WithMany(t => t.Babies).Map(t => t.MapLeftKey("BabyID")
+                    .MapRightKey("MediaRecordID").ToTable("T_BabyMedia"));
         }
     }
 }

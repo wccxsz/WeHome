@@ -9,15 +9,15 @@ namespace WeHome.Entities
     [Table("T_Role")]
     public class Role : IRole<int>
     {
-        [Column("F_ID")]
+        [Column("Id")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Column("F_RoleName"), MaxLength(100)]
+        [Column("RoleName"), MaxLength(100)]
         public string Name { get; set; }
 
-        [Column("F_CreateTime")]
+        [Column("CreateTime")]
         public DateTime CreateTime { get; set; }
 
         public virtual ICollection<User> Users { get; set; }

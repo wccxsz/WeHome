@@ -14,13 +14,13 @@ namespace WeHome.Entities
         /// </summary>
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("F_BabyID")]
+        [Column("BabyID")]
         public int Id { get; set; }
 
         /// <summary>
         /// 宝贝姓名
         /// </summary>
-        [Column("F_BabyName")]
+        [Column("BabyName")]
         [MaxLength(50)]
         public string BabyName { get; set; }
 
@@ -32,56 +32,56 @@ namespace WeHome.Entities
         /// <summary>
         /// 宝贝小名
         /// </summary>
-        [Column("F_NickName")]
+        [Column("NickName")]
         [MaxLength(50)]
         public string NickName { get; set; }
 
         /// <summary>
         /// 生日
         /// </summary>
-        [Column("F_Birthday")]
+        [Column("Birthday")]
         public DateTime Birthday { get; set; }
 
         /// <summary>
         /// 生日阴历Or阳历
         /// </summary>
-        [Column("F_BirthDateType")]
+        [Column("BirthDateType")]
         public BirthDateType BirthDateType { get; set; }
 
         /// <summary>
         /// 性别
         /// </summary>
-        [Column("F_Sexuality")]
+        [Column("Sexuality")]
         public Sexuality Sexuality { get; set; }
 
         /// <summary>
         /// 出生体重
         /// </summary>
-        [Column("F_Weight")]
+        [Column("Weight")]
         public decimal Weight { get; set; }
 
         /// <summary>
         /// 出生时身高
         /// </summary>
-        [Column("F_Stature")]
+        [Column("Stature")]
         public decimal Stature { get; set; }
 
         /// <summary>
         /// 婴儿出生健康状况
         /// </summary>
-        [Column("F_HealthState")]
+        [Column("HealthState")]
         public HealthState HealthState { get; set; }
 
         /// <summary>
         /// 婴儿简况状况描述
         /// </summary>
-        [Column("F_HealthDescription")]
+        [Column("HealthDescription")]
         public string HealthDescription { get; set; }
 
-        [Column("F_FatherID")]
+        [Column("FatherID")]
         public int FatherId { get; set; }
 
-        [Column("F_MotherID")]
+        [Column("MotherID")]
         public int MotherId { get; set; }
 
         /// <summary>

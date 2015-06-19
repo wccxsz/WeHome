@@ -6,45 +6,46 @@ using WeHome.Framework.Enums;
 
 namespace WeHome.Entities
 {
+    [Table("T_MediaRecord")]
     public class MediaRecord
     {
-        [Column("F_MediaRecordID")]
+        [Column("MediaRecordID")]
         public int Id { get; set; }
 
         /// <summary>
         /// 文件类型
         /// </summary>
-        [Column("F_MediaType")]
+        [Column("MediaType")]
         public MediaType MediaType { get; set; }
 
         /// <summary>
         /// 文件访问路径
         /// </summary>
-        [Column("F_MediaUrl")]
+        [Column("MediaUrl")]
         [MaxLength(500)]
         public string MediaUrl { get; set; }
 
         /// <summary>
         /// 拍摄时间
         /// </summary>
-        [Column("F_MakeDate")]
+        [Column("MakeDate")]
         public DateTime MakeDate { get; set; }
 
         /// <summary>
         /// 上传时间
         /// </summary>
-        [Column("F_CreateTime")]
+        [Column("CreateTime")]
         public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 文件描述
         /// </summary>
-        [Column("F_MediaDes")]
+        [Column("MediaDes")]
         public string MediaDescription { get; set; }
 
         public virtual ICollection<Baby> Babies { get; set; }
 
-        [Column("F_Creator")]
+        [Column("Creator")]
         public int CreateUserId { get; set; }
 
         [ForeignKey("CreateUserId")]
