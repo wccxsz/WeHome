@@ -55,6 +55,7 @@ namespace WeHome.Entities
         /// 手机号
         /// </summary>
         [Column("PhoneNumber"), Required, DataType(DataType.PhoneNumber), MaxLength(20)]
+        [Index("Index_PhoneNumber")]
         public string PhoneNumber { get; set; }
 
         /// <summary>

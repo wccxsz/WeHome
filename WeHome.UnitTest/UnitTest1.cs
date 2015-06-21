@@ -51,7 +51,7 @@ namespace WeHome.UnitTest
         [TestMethod]
         public void SendEmail()
         {
-            Email.SendMail("密码重置邮件", "403033546@qq.com");
+            Email.SendEmail("403033546@qq.com", "女儿照片", "测试", new string[] {"d:/1.jpg", "d:/2.jpg"});
         }
     }
 }

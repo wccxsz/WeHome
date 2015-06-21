@@ -22,16 +22,17 @@ namespace WeHome.BLL
         /// <returns></returns>
         public User GetUser(int? id = null, string userName = "")
         {
-            
+
             if (id == null && string.IsNullOrEmpty(userName))
                 throw new ArgumentNullException();
-            if (id!=null)
+            if (id != null)
             {
                 return _db.Users.Find(id.Value);
             }
             if (string.IsNullOrEmpty(userName)) return null;
             userName = userName.ToLower();
-            return _db.Users.FirstOrDefault(c => c.UserName == userName);
+            return
+                _db.Users.FirstOrDefault(c => c.UserName == userName || c.Email == userName || c.PhoneNumber == userName);
         }
     }
 }

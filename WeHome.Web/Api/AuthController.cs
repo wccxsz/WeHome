@@ -8,6 +8,7 @@ using Microsoft.Owin.Security;
 using WeHome.Entities;
 using WeHome.Framework;
 using WeHome.Framework.Tools;
+using WeHome.Web.Models;
 
 namespace WeHome.Web.Api
 {
@@ -15,34 +16,29 @@ namespace WeHome.Web.Api
     {
 
         [HttpPost]
-        public ResultState Login(User user)
+        public ResultState Login(LoginViewModel loginViewModel)
         {
-            var password = user.Password;
+            var password = loginViewModel.Password;
             var state = new ResultState();
             var userBll = Work.UserBll;
-            user = userBll.GetUser(userName: user.UserName);
-            if (user == null)
+            var user = userBll.GetUser(userName: loginViewModel.UserName);
+            if (user != null && user.Password == EncryptTool.Encrypt(password.Trim()))
             {
-                state.Data = false;
-                state.Status = 0;
-                return state;
-            }
-            if (user.Password == EncryptTool.Encrypt(password.Trim()))
-            {
+                user.AccessFailedCount = 0;
                 var principal = CreatePrincipal(user);
                 HttpContext.Current.GetOwinContext()
                     .Authentication.SignIn(
                         new AuthenticationProperties() {IsPersistent = true, ExpiresUtc = DateTime.Now.AddDays(1)},
                         principal.Identities.ToArray());
-                state.Status = 1;
-                state.Data = true;
+                state.Status = true;
+                state.Data = null;
             }
             else
             {
-                state.Data = false;
-                state.Status = 0;
+                state.Data = "用户名或密码错误!";
+                state.Status = false;
             }
-            
+
             return state;
         }
 
