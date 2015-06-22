@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Web.Optimization
+@{
     Layout = null;
 }
 
@@ -14,20 +15,8 @@
     <meta content="亲子网" name="description" />
     <meta content="王怀亮" name="author"/>
     <link rel="shortcut icon" href="favicon.ico" />
-    <link href="~/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
-    <link href="~/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/assets/global/plugins/uniform/css/uniform.default.min.css" rel="stylesheet" />
-    <link href="~/assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet"/>
-
-    <link href="~/assets/global/plugins/select2/select2.css" rel="stylesheet" />
+    @Styles.Render("~/Assets/CommonStyle")
     <link href="~/assets/admin/pages/css/login-soft.css" rel="stylesheet"/>
-
-    <link href="~/assets/global/css/components.css" rel="stylesheet" />
-    <link href="~/assets/global/css/plugins.css" rel="stylesheet" />
-    <link href="~/assets/admin/layout/css/layout.css" rel="stylesheet" />
-    <link href="~/assets/admin/layout/css/themes/default.css" rel="stylesheet" />
-    <link href="~/assets/admin/layout/css/custom.css" rel="stylesheet"/>
     <style type="text/css">
         .login .content .form-actions {
             padding: 0 30px ;
@@ -184,15 +173,8 @@
     <script src="../../assets/global/plugins/respond.min.js"></script>
     <script src="../../assets/global/plugins/excanvas.min.js"></script>
     <![endif]-->
-    <script src="~/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-    <script src="~/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-    <script src="~/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="~/assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
-    <!-- END CORE PLUGINS -->
-    <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <script src="~/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="~/assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
-    <!-- END PAGE LEVEL PLUGINS -->
+    <script src="~/assets/global/plugins/jquery.min.js"></script>
+    @Scripts.Render("~/assets/scripts")
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="~/assets/admin/pages/scripts/login-soft.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
