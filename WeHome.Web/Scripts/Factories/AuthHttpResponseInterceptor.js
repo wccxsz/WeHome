@@ -1,4 +1,4 @@
-﻿var AuthHttpResponseInterceptor = function ($q, $location, $injector) {
+﻿var AuthHttpResponseInterceptor = function ($q, $location) {
     return {
         response: function (response) {
             if (response.status === 401) {
@@ -8,11 +8,12 @@
         },
         responseError: function (rejection) {
             if (rejection.status === 401) {
-                $injector.get('$state').go('loginRegister', { returnUrl: $location.path() });
+                console.log("Response Error 401", rejection);
+                window.location.href = "/Home/Index";
             }
             return $q.reject(rejection);
         }
     }
 }
 
-AuthHttpResponseInterceptor.$inject = ['$q', '$location', '$injector'];
+AuthHttpResponseInterceptor.$inject = ['$q', '$location'];

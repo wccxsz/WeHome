@@ -4407,8 +4407,7 @@
     <Content Include="assets\global\scripts\metronic.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\AuthHttpResponseInterceptor.js" />
-    <Content Include="Scripts\Controllers\LoginController.js" />
+    <Content Include="Scripts\Factories\AuthHttpResponseInterceptor.js" />
     <Content Include="Scripts\HomeApp.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -4759,6 +4758,7 @@
     <Content Include="assets\global\plugins\uniform\README.md" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Home\UserImages.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4769,6 +4769,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
+    <Folder Include="Scripts\Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeHome.BLL\WeHome.BLL.csproj">

@@ -29,6 +29,16 @@ namespace WeHome.Web
                 .Include("~/assets/global/plugins/bootstrap-toastr/toastr.min.js")
                 .Include("~/assets/global/plugins/jquery-validation/js/jquery.validate.min.js")
                 .Include("~/assets/global/plugins/backstretch/jquery.backstretch.min.js"));
+
+            bundles.Add(new ScriptBundle("~/Assets/AngularJS")
+                .Include("~/assets/global/plugins/angularjs/angular.min.js")
+                .Include("~/assets/global/plugins/angularjs/angular-touch.min.js")
+                .Include("~/assets/global/plugins/angularjs/plugins/angular-ui-router.min.js")
+                .IncludeDirectory("~/Scripts/Controllers", "*.js")
+                .IncludeDirectory("~/Scripts/Factories", "*.js")
+                .Include("~/Scripts/HomeApp.js"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
