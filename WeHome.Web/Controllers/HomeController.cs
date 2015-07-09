@@ -11,7 +11,7 @@ namespace WeHome.Web.Controllers
             return View();
         }
 
-        [Route("/user/images")]
+        [Route("user/images")]
         public ActionResult UserImages()
         {
             return View();

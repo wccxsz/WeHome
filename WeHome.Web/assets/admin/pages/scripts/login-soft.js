@@ -80,7 +80,7 @@ var Login = function () {
                 success: function(result) {
                     var msg = '';
                     if (result.Status === true)
-                        window.location.href = '/Default/Index';
+                        window.location.href = '/Single/Index';
                     else
                         toastr.error(result.Data, "提示信息");
                 }
