@@ -4407,6 +4407,7 @@
     <Content Include="assets\global\scripts\metronic.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Controllers\HomeController.js" />
     <Content Include="Scripts\Factories\AuthHttpResponseInterceptor.js" />
     <Content Include="Scripts\HomeApp.js" />
     <Content Include="Web.config">
@@ -4420,11 +4421,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SingleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LocalClass\CssUrlTransform.cs" />
+    <Compile Include="LocalClass\NonOrderingBundleOrderer.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -4757,8 +4760,9 @@
     <Content Include="assets\global\plugins\uniform\css\uniform.default.scss" />
     <Content Include="assets\global\plugins\uniform\README.md" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Single\Index.cshtml" />
     <Content Include="Views\Home\UserImages.cshtml" />
+    <Content Include="Views\Single\Video.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4769,7 +4773,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
-    <Folder Include="Scripts\Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeHome.BLL\WeHome.BLL.csproj">
@@ -4796,7 +4799,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9880</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

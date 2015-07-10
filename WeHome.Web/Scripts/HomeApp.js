@@ -1,47 +1,42 @@
-﻿var HomeApp = angular.model("HomeApp", [
+﻿var HomeApp = angular.module("HomeApp", [
     "ui.router"
 ]);
 
-AwesomeAngularMVCApp.factory('AuthHttpResponseInterceptor', AuthHttpResponseInterceptor);
+HomeApp.controller('HomeController', HomeController);
+HomeApp.factory('AuthHttpResponseInterceptor', AuthHttpResponseInterceptor);
 
-var configFunction = function ($stateProvider, $httpProvider, $locationProvider) {
-    $locationProvider.hashPrefix('!').html5Mode(true);
+var configFunction = function($stateProvider, $httpProvider, $locationProvider, $urlRouterProvider) {
+    $locationProvider.hashPrefix('!').html5Mode({enabled: true});
+
+    //$stateProvider.when("", "images");
+    $urlRouterProvider.deferIntercept();
     $stateProvider
         .state('images', {
-            url: '/user/images',
+            url: '/single/' + curUser + '/images',
             views: {
                 "Main": {
-                    templateUrl: function (params) { return '/Home/UserImages'; }
+                    templateUrl: function(params) { return '/user/images'; }
                 }
             }
         })
-        .state('stateTwo', {
-            url: '/stateTwo',
+        .state('video', {
+            url: '/single/' + curUser + '/video',
             views: {
-                "containerOne": {
-                    templateUrl: '/routesDemo/one'
+                "Main": {
+                    templateUrl: function(params) { return '/user/videos'; }
                 }
             }
         })
         .state('stateThree', {
             url: '/stateThree?donuts',
             views: {
-                "containerOne": {
-                    templateUrl: function (params) { return '/Home/UserImages'; }
-                }
-            }
-        })
-        .state('loginRegister', {
-            url: '/loginRegister?returnUrl',
-            views: {
-                "containerOne": {
-                    templateUrl: '/Account/Login',
-                    controller: LoginController
+                "Main": {
+                    templateUrl: function(params) { return '/Home/UserImages'; }
                 }
             }
         });
 
     $httpProvider.interceptors.push('AuthHttpResponseInterceptor');
 }
-configFunction.$inject = ['$stateProvider', '$httpProvider', '$locationProvider'];
+configFunction.$inject = ['$stateProvider', '$httpProvider', '$locationProvider', '$urlRouterProvider'];
 HomeApp.config(configFunction);
