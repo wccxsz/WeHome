@@ -4428,6 +4428,7 @@
     </Compile>
     <Compile Include="LocalClass\CssUrlTransform.cs" />
     <Compile Include="LocalClass\NonOrderingBundleOrderer.cs" />
+    <Compile Include="LocalClass\RenamingMultipartFormDataStreamProvider.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -4771,7 +4772,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\Uploads\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
   </ItemGroup>
   <ItemGroup>
