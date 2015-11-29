@@ -11,3 +11,4 @@ bin/*obj/*
 /WeHome.UnitTest/bin
 /WeHome.Web/bin
 /WeHome.Web/obj
+/packages

@@ -28,11 +28,10 @@ namespace WeHome.Web.Api
             }
 
             string root = System.Web.HttpContext.Current.Server.MapPath("~/App_Data/uploads");
-            var provider = new RenamingMultipartFormDataStreamProvider(root);
-            var task = request.Content.ReadAsMultipartAsync(provider).
+            var task = request.Content.ReadAsMultipartAsync().
                 ContinueWith<HttpResponseMessage>(o =>
                 {
-                   
+
                     return new HttpResponseMessage()
                     {
                         Content = new StringContent("File uploaded.")
