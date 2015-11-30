@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
@@ -11,36 +8,12 @@ using Microsoft.Owin.Security;
 using WeHome.Entities;
 using WeHome.Framework;
 using WeHome.Framework.Tools;
-using WeHome.Web.LocalClass;
 using WeHome.Web.Models;
 
 namespace WeHome.Web.Api
 {
     public class AuthController : BaseController
     {
-        [HttpPost]
-        public Task<HttpResponseMessage> PostFile()
-        {
-            HttpRequestMessage request = this.Request;
-            if (!request.Content.IsMimeMultipartContent())
-            {
-                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
-            }
-
-            string root = System.Web.HttpContext.Current.Server.MapPath("~/App_Data/uploads");
-            var task = request.Content.ReadAsMultipartAsync().
-                ContinueWith<HttpResponseMessage>(o =>
-                {
-
-                    return new HttpResponseMessage()
-                    {
-                        Content = new StringContent("File uploaded.")
-                    };
-                }
-                );
-            return task;
-        }
-
         [HttpPost]
         public ResultState Login(LoginViewModel loginViewModel)
         {

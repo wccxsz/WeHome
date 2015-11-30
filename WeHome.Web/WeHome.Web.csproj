@@ -4778,6 +4778,8 @@
     <Content Include="Views\Single\Index.cshtml" />
     <Content Include="Views\Home\UserImages.cshtml" />
     <Content Include="Views\Single\Video.cshtml" />
+    <Content Include="Views\Single\MySpace.cshtml" />
+    <Content Include="Views\Single\Question.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

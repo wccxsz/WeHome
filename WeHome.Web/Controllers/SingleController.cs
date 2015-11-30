@@ -21,5 +21,17 @@ namespace WeHome.Web.Controllers
         {
             return View();
         }
+
+        [Route("admin/space")]
+        public ActionResult MySpace()
+        {
+            return View();
+        }
+
+        [Route("user/question")]
+        public ActionResult Question()
+        {
+            return View();
+        }
     }
 }
