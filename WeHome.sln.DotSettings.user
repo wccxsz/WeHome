@@ -9,6 +9,7 @@
   &lt;Assembly Path="D:\Project\WeHome\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll" /&gt;&#xD;
   &lt;Assembly Path="D:\Project\WeHome\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\git库\WeHome\packages\com.azmisahin.PlugIn.Mail.1.0.0\lib\com.azmisahin.PlugIn.Mail.dll" /&gt;&#xD;
+  &lt;Assembly Path="E:\WeHome\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	
 	

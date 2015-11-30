@@ -45,11 +45,6 @@ namespace WeHome.Data.Store
             return Task.FromResult(_dbcontext.SaveChanges());
         }
 
-        public Task<TUser> FindByIdAsync(string userId)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<TUser> FindByIdAsync(TKey userId)
         {
             var id = userId as int?;
