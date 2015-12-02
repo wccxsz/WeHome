@@ -6,11 +6,11 @@
 
 <!DOCTYPE html>
 
-<html>
+<html ng-app="HomeApp" ng-controller="HomeController" >
 <head>
     <meta name="viewport" content="width=device-width"/>
     <meta charset="utf-8" />
-    <title ng-bind="models.Title"></title>
+    <title>{{models.Title}}</title>
     <link rel="shortcut icon" href="~/favicon.ico"/>
     <base href="/">
     @Styles.Render("~/Assets/CommonStyle")
@@ -62,7 +62,7 @@
     </script>
 
 </head>
-<body ng-app="HomeApp" ng-controller="HomeController" class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo">
+<body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo">
     <div class="page-header navbar navbar-fixed-top">
         <div class="page-logo hidden-sm hidden-xs">
             <a href="#">

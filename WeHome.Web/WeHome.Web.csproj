@@ -4443,6 +4443,7 @@
     </Compile>
     <Compile Include="LocalClass\CssUrlTransform.cs" />
     <Compile Include="LocalClass\NonOrderingBundleOrderer.cs" />
+    <Compile Include="LocalClass\RenamingMultipartFormDataStreamProvider.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
