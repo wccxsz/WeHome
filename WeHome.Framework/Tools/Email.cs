@@ -7,7 +7,7 @@ namespace WeHome.Framework.Tools
     {
         public static void SendEmail(string toEmail, string subject, string mailBody, string[] attachFiles)
         {
-            var fromEmail = "wccxsz@126.com";
+            var fromEmail = "wccx3123123123s12z@126.com";
             var message = new MailMessage(fromEmail, toEmail, subject, mailBody);
             foreach (var item in attachFiles)
             {
@@ -15,7 +15,7 @@ namespace WeHome.Framework.Tools
             }
             var client = new SmtpClient("smtp.126.com", 25)
             {
-                Credentials = new NetworkCredential(fromEmail, "15169249984"),
+                Credentials = new NetworkCredential(fromEmail, "1123123123123"),
                 EnableSsl = true
             };
             //client.SendCompleted += (s, e) =>
